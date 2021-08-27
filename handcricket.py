@@ -2,8 +2,8 @@
 import random
 
 def num_of_overs(overs):
-    n = overs * 36
-    com_score = random.randint(0, 36)
+    n = int(overs * 36)
+    com_score = random.randint(0, n)
     return com_score
    
    
@@ -44,6 +44,9 @@ for i in range(overs):
         total = result(user_num, com_num, total, comp_score)
         if total == 0:
             break
+    if total == 0:
+           break    
+
 
 if (total != 0):      # total will  be zero if match ended before the overs are completed.
     if(total == comp_score):
